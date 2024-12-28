@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366; /* Dark blue */
+            padding: 15px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #FFD700; /* Yellow on hover */
+        }
+
+        /* Main Section */
+        .tour-packages {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #003366; /* Dark blue */
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .package {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package h2 {
+            color: #003366; /* Dark blue */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .package img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .package-description {
+            color: #333;
+        }
+
+        .package-description p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .package-description ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .package-description ul li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .package-description ul li strong {
+            color: #003366; /* Dark blue */
+        }
+
+        button {
+            background-color: #FFD700; /* Yellow */
+            color: #003366; /* Dark blue */
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FFCC00; /* Light yellow on hover */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            .package {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .package-description ul li {
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="submit_message.html">Submit a Message</a></li>
+                <li><a href="messages.html">View Messages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tour-packages">
+        <h1>Our Tour Packages</h1>
+
+        <!-- Sinai Tour Package -->
+        <div class="package">
+            <h2>Sinai Adventure Tour</h2>
+            <img src="Sinai.jpg" alt="Sinai Tour">
+            <div class="package-description">
+                <p>Explore the ancient wonders of Sinai with our all-inclusive adventure package. Visit historic sites, hike through the desert, and experience local culture.</p>
+                <ul>
+                    <li><strong>Duration:</strong> 5 days, 4 nights</li>
+                    <li><strong>Highlights:</strong> Mount Sinai, Saint Catherine's Monastery, Ras Mohammed National Park</li>
+                    <li><strong>Price:</strong> $500 per person</li>
+                </ul>
+                <button onclick="window.location.href='ordersina.html'"> Book Now</button>
+            </div>
+        </div>
+
+        <!-- Marsa Matrouh Tour Package -->
+        <div class="package">
+            <h2>Marsa Matrouh Beach Escape</h2>
+            <img src="Marsa.jpg" alt="Marsa Matrouh Tour">
+            <div class="package-description">
+                <p>Relax on the beautiful beaches of Marsa Matrouh, enjoy the clear blue waters, and explore the pristine nature of the Mediterranean coast.</p>
+                <ul>
+                    <li><strong>Duration:</strong> 4 days, 3 nights</li>
+                    <li><strong>Highlights:</strong> White Beach, Cleopatra's Bath, Mersa Matrouh Bay</li>
+                    <li><strong>Price:</strong> $350 per person</li>
+                </ul>
+                <button onclick="window.location.href='ordeermars.html'"> Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tour Agency. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+

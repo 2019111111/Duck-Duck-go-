@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366; /* Dark blue */
+            padding: 15px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            color: #FFD700; /* Yellow on hover */
+        }
+
+        .payment-form {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #003366;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 10px;
+            color: #003366;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #FFD700;
+        }
+
+        .payment-details {
+            margin-bottom: 20px;
+        }
+
+        .secure-payment {
+            font-size: 1.1em;
+            color: #FF9900;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: #003366;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #FFCC00;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <a href="home.html" title='Go to the Home'>Home</a>
+                <a href="product.html" title='GO to producrs'>  View Products </a>
+                <a href="submit_message.html" title='Go to submit'> Submit a Message </a>
+                <a href="messages.html" title='Go to read messages'> View Messages</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="payment-form">
+        <h1>Payment Details</h1>
+
+        <!-- Payment Form Section -->
+        <div class="payment-details">
+            <p><strong>Tour Package:</strong> Sinai Adventure Tour</p>
+             
+            <li><strong>Duration:</strong> 5 days, 4 nights</li>
+                    <li><strong>Highlights:</strong> Mount Sinai, Saint Catherine's Monastery, Ras Mohammed National Park</li>
+                    <li><strong>Price:</strong> $500 per person</li>
+        </div>
+
+        <form>
+            <!-- Credit Card Details -->
+            <label for="cardName">Cardholder Name:</label>
+            <input type="text" id="cardName" name="cardName" placeholder="Enter name on card" required>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="number" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="number" id="cvv" name="cvv" placeholder="Enter CVV" required>
+
+            <!-- Billing Details -->
+            <label for="billingAddress">Billing Address:</label>
+            <input type="text" id="billingAddress" name="billingAddress" placeholder="Enter billing address" required>
+
+            <label for="billingEmail">Email:</label>
+            <input type="email" id="billingEmail" name="billingEmail" placeholder="Enter your email" required>
+
+            <label for="billingPhone">Phone Number:</label>
+            <input type="tel" id="billingPhone" name="billingPhone" placeholder="Enter your phone number" required>
+        </form>
+
+        <div class="secure-payment">
+            <p>Payment is secure with encryption for your privacy and protection.</p>
+        </div>
+
+        <button onclick="window.location.href='payment_success.html'">Complete Payment</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tour Agency. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+

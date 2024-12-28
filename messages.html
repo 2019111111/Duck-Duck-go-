@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is our page for Relax Duck">
+    <title>Duck Duck GO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #e1d947;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        section {
+            background: #eae2c4;
+
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #020a13;
+
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #070505;
+
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            border-bottom: 2px solid #070c11;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="IMG_1383.PNG" width="100px" alt="Duck Image">
+        <h1>DUCK DUCK GO</h1>
+    </header>
+    <nav>
+        <a href="home.html" title="Go to the Home">Home</a>
+        <a href="submit_message.html" title="Go to submit">Submit a Message</a>
+        <a href="messages.html" title="Go to read messages">View Messages</a>
+    </nav>
+    <main>
+        <section>
+            <h1>What Our Guests Say</h1>
+            <br><br>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+                <tr>
+                    <td>Khadiga Yahia</td>
+                    <td>khadiga.yahia59@gmail.com</td>
+                    <td>The safari was incredible! We saw so many animals and enjoyed the experience.</td>
+                </tr>
+                <tr>
+                    <td>Shrooq Hussien</td>
+                    <td>shrooq.hussien@gmail.com</td>
+                    <td>Had a great time on the yacht. The views were spectacular and the service was excellent.</td>
+                </tr>
+                <tr>
+                    <td>Rawan Wageeh</td>
+                    <td>rawan.wageeh@gmail.com</td>
+                    <td>The aqua activities were refreshing and fun. The guides were knowledgeable and friendly.</td>
+                </tr>
+                <tr>
+                    <td>Rahma Morsy</td>
+                    <td>rahma.morsy@gmail.com</td>
+                    <td>The Bedouin village experience was a highlight of our trip. We learned so much about local
+                        culture and enjoyed delicious food.</td>
+                </tr>
+                <tr>
+                    <td> rahma </td>
+                    <td>rahma@gmail.com</td>
+                    <td>soooooo</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Marsa Matrouh Tours. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('keydown', function (event) {
+            if (event.altKey) {
+                switch (event.key) {
+                    case 'h':
+                        window.location.href = 'Home.htm';
+                        break;
+                    case 's':
+                        window.location.href = 'submit.html';
+                        break;
+                    case 'v':
+                        window.location.href = 'display.html';
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

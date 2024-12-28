@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            padding: 15px;
+        }
+
+       /* Navbar Styles */
+.navbar {
+    background-color: #003366;
+    overflow: hidden;
+    color: white;
+    padding: 10px 20px;
+}
+.navbar a {
+    float: center ;
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.navbar a:hover {
+    background-color: #0044cc;
+}
+        .order-details {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #003366;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .order-summary,
+        .customer-details {
+            margin-bottom: 20px;
+        }
+
+        .order-summary p,
+        .customer-details p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #FFD700;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: #003366;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FFCC00;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+
+    </div>
+
+    <section class="order-details">
+        <h1>Order Details</h1>
+
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+            <li><strong>Duration:</strong> 4 days, 3 nights</li>
+                    <li><strong>Highlights:</strong> White Beach, Cleopatra's Bath, Mersa Matrouh Bay</li>
+                    <li><strong>Price:</strong> $350 per person</li>
+        </div>
+
+        <!-- Customer Details Form -->
+        <div class="customer-details">
+            <h2>Shipping Details</h2>
+            <form>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+                <label for="address">Shipping Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your shipping address" required><br><br>
+            </form>
+        </div>
+
+        <!-- Proceed to Payment Button -->
+        <button onclick="window.location.href='payment marsa.html'">Proceed to Payment</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tour Agency. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+

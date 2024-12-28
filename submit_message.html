@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is our page for Relax Duck">
+    <title>Duck Duck GO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #e1d947;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            border-radius: 50%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        section {
+            background: #eae2c4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        input[list] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="IMG_1383.PNG" width="100px">
+        <h1>DUCK DUCK GO</h1>
+        <nav>
+            <a href="home.html" title='Go to the Home'>Home</a>
+            <a href="submit_message.html" title='Go to submit'>Submit a Message</a>
+            <a href="messages.html" title="Go to read messages">View Messages</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Share Your Experience</h1>
+            <p>Please fill out the following fields to submit your message:</p>
+            <form id="messageForm" action="submit_message.php" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autofocus>
+                    <div id="nameError" class="error"></div>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div id="emailError" class="error"></div>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required minlength="10"
+                        maxlength="15">
+                    <div id="passwordError" class="error"></div>
+                </div>
+                <div>
+                    <label for="body">Message:</label>
+                    <textarea id="body" name="body" rows="4" cols="50" required></textarea>
+                    <div id="bodyError" class="error"></div>
+                </div>
+                <div>
+                    <label for="trip">Select the Trip:</label>
+                    <input list="tour" name="tour" id="trip">
+                    <datalist id="tour">
+                        <option value="Safari"></option>
+                        <option value="Yacht"></option>
+                        <option value="Aqua"></option>
+                        <option value="Bedouin"></option>
+                    </datalist>
+                    <div id="tripError" class="error"></div>
+                </div>
+                <div>
+                    <label for="rang">Rate Your Trip (0-100):</label>
+                    <input type="range" name="rang" id="rang" required min="0" max="100" step="10" value="50">
+                    <div id="rangError" class="error"></div>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Marsa Matrouh Tours. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('keydown', function (event) {
+            if (event.altKey) {
+                switch (event.key) {
+                    case 'h':
+                        window.location.href = 'Home.htm';
+                        break;
+                    case 's':
+                        window.location.href = 'submit.html';
+                        break;
+                    case 'v':
+                        window.location.href = 'display.html';
+                        break;
+                }
+            }
+        });
+
+        document.getElementById('messageForm').addEventListener('submit', function (event) {
+            let valid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            // Validate Name
+            const name = document.getElementById('name');
+            if (!name.value) {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                valid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById('email');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value)) {
+                document.getElementById('emailError').textContent = 'Enter a valid email address.';
+                valid = false;
+            }
+
+            // Validate Password
+            const password = document.getElementById('password');
+            if (password.value.length < 10 || password.value.length > 15) {
+                document.getElementById('passwordError').textContent = 'Password must be between 10 and 15 characters.';
+                valid = false;
+            }
+
+            // Validate Message
+            const body = document.getElementById('body');
+            if (!body.value) {
+                document.getElementById('bodyError').textContent = 'Message is required.';
+                valid = false;
+            }
+
+            // Validate Trip
+            const trip = document.getElementById('trip');
+            if (!trip.value) {
+                document.getElementById('tripError').textContent = 'Select a trip.';
+                valid = false;
+            }
+
+            // Validate Range
+            const rang = document.getElementById('rang');
+            if (rang.value < 0 || rang.value > 100) {
+                document.getElementById('rangError').textContent = 'Rate must be between 0 and 100.';
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+ 
+         
+
+
+   
+
+
+        
+    
+
+    
+   
+    
+
+   
+       
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.altKey && event.key === 'h') {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+          
+    
+          <script src="jj.js"> </script>
+
+</body>
+</html>
